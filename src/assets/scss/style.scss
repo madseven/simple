@@ -1,0 +1,78 @@
+@import 'vars';
+@import './reset';
+@import './fonts';
+
+// uttils
+@import 'uttils/mixins';
+@import 'uttils/functions';
+
+html {
+    font-size: 0.851vw;
+    @media (max-width: 992px) {
+        font-size: 16px;
+    }
+}
+
+body {
+    overflow-x: hidden;
+    font-family: $default-font-family;
+    background: $dark--50;
+}
+
+body.lock {
+    overflow: hidden;
+    touch-action: none;
+}
+
+.site {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+    &-top {
+        flex: 1 0 auto;
+    }
+    &-bottom {
+        flex: 0 1 auto;
+    }
+}
+
+.container {
+    max-width: toRem(1440px);
+    padding-inline: toRem(40px);
+    min-width: toRem(320px);
+    margin: 0 auto;
+    @include MQmax(1440px) {
+        max-width: toRem(1800px);
+    }
+    @include MQmax($tablet) {
+        padding-inline: toRem(32px);
+    }
+    @include MQmax($mobile) {
+        padding-inline: toRem(15px);
+    }
+}
+
+
+.section-123 {
+    height: 100vh;
+    display: flex;
+    align-items: center
+}
+
+
+// lib
+@import 'lib/**/*.scss';
+
+// components
+@import 'components/**/*.scss';
+
+// block
+@import 'blocks/**/*.scss';
+
+// pages
+@import 'pages/**/*.scss';
+
+// animations
+@import 'animations/**/*.scss';
