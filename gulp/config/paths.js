@@ -3,7 +3,7 @@ const PATHS = {
         html: 'src/',
         twig: 'src/pages/**/*.twig',
         scripts: 'src/js/app.js',
-        styles: 'src/assets/scss/style.scss',
+        styles: './src/assets/scss/style.scss',
         images: 'src/assets/img/**/*.*{jpg,jpeg,png,gif,svg,ico}',
         fonts: 'src/assets/fonts/**',
         videos: 'src/assets/videos/**/*.{webm,avif,mp4}',

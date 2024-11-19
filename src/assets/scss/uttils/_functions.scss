@@ -1,6 +1,7 @@
+@use '../vars' as *;
 @function toRem($value) {
     $remValue: calc($value / $font-base) + rem;
-    @return $remValue;
+    @return calc($value / $font-base) * 1rem;
 }
 @function toEm($value, $font: 16px) {
     $emValue: calc($value / $font) + em;

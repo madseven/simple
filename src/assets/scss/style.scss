@@ -1,10 +1,32 @@
-@import 'vars';
-@import './reset';
-@import './fonts';
+@use 'vars' as *;
+@use 'reset' as *;
+@use 'fonts' as *;
 
 // uttils
-@import 'uttils/mixins';
-@import 'uttils/functions';
+@use './uttils/mixins' as *;
+@use './uttils/functions' as *;
+
+// TODO - в корне каталога создается индексный файл по примеру _nameCatalog-index.scss, в него экспортируются через @forward все вложенные scss файлы с указанием some/path/file. А уже в style.scss через @use закидывается индексный файл, который объединяет в себе все содержимое.
+// pages
+@use './pages/pages-index';
+// _pages-index
+//  |
+//  @forward './about/about-page';
+//  @forward './contact/contact-page';
+
+// lib
+// @use './lib/pages-index';
+
+// // components
+// @use './components/';
+
+// // block
+// @use './blocks/';
+
+// // animations
+// @use './animations/';
+
+// TODO - создан _global.scss с экспортом трех часто используемых файлов, для использования @use 'some/path/global' as *; в новосозданных файлах.
 
 html {
     font-size: 0.851vw;
@@ -16,7 +38,6 @@ html {
 body {
     overflow-x: hidden;
     font-family: $default-font-family;
-    background: $dark--50;
 }
 
 body.lock {
@@ -54,25 +75,8 @@ body.lock {
     }
 }
 
-
 .section-123 {
     height: 100vh;
     display: flex;
-    align-items: center
+    align-items: center;
 }
-
-
-// lib
-@import 'lib/**/*.scss';
-
-// components
-@import 'components/**/*.scss';
-
-// block
-@import 'blocks/**/*.scss';
-
-// pages
-@import 'pages/**/*.scss';
-
-// animations
-@import 'animations/**/*.scss';
