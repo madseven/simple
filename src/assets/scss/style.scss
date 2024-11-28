@@ -1,14 +1,35 @@
-@import 'vars';
-@import './reset';
-@import './fonts';
+@use 'vars' as *;
+@use 'reset' as *;
+@use 'fonts' as *;
 
 // uttils
-@import 'uttils/mixins';
-@import 'uttils/functions';
+@use './uttils/mixins' as *;
+@use './uttils/functions' as *;
+
+// TODO - создан _global.scss с экспортом трех часто используемых файлов, для использования @use 'some/path/global' as *; в новосозданных файлах.
+
+// TODO - в корне каталога создается индексный файл по примеру index-nameCatalog.scss, в него экспортируются через @forward все вложенные scss файлы с указанием some/path/file. А уже в style.scss через @use закидывается индексный файл, который объединяет в себе все содержимое.
+
+// lib
+// @use './lib/';
+
+// // components
+// @use './components/';
+
+// // animations
+// @use './animations/';
+
+@use './components/index-components';
+
+// // sections
+// @use './sections/index-sections.scss';
+
+// pages
+@use './pages/index-pages';
 
 html {
     font-size: 0.851vw;
-    @media (max-width: 992px) {
+    @media (max-width: $laptop) {
         font-size: 16px;
     }
 }
@@ -16,12 +37,10 @@ html {
 body {
     overflow-x: hidden;
     font-family: $default-font-family;
-    background: $dark--50;
-}
-
-body.lock {
-    overflow: hidden;
-    touch-action: none;
+    &.lock {
+        overflow: hidden;
+        touch-action: none;
+    }
 }
 
 .site {
@@ -39,40 +58,44 @@ body.lock {
 }
 
 .container {
-    max-width: toRem(1440px);
-    padding-inline: toRem(40px);
-    min-width: toRem(320px);
+    max-width: toRem(1440);
+    padding-inline: toRem(40);
+    min-width: toRem(320);
     margin: 0 auto;
-    @include MQmax(1440px) {
-        max-width: toRem(1800px);
+    @include MQmax(1440) {
+        max-width: toRem(1800);
     }
     @include MQmax($tablet) {
-        padding-inline: toRem(32px);
+        padding-inline: toRem(32);
     }
     @include MQmax($mobile) {
-        padding-inline: toRem(15px);
+        padding-inline: toRem(15);
     }
 }
-
 
 .section-123 {
     height: 100vh;
     display: flex;
-    align-items: center
+    align-items: center;
 }
 
+.sprite-svg {
+    position: absolute;
+    z-index: -100;
+    opacity: 0;
+    visibility: hidden;
+}
 
-// lib
-@import 'lib/**/*.scss';
-
-// components
-@import 'components/**/*.scss';
-
-// block
-@import 'blocks/**/*.scss';
-
-// pages
-@import 'pages/**/*.scss';
-
-// animations
-@import 'animations/**/*.scss';
+// Прячет элемент в контексте родителя.
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}

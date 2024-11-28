@@ -1,0 +1,31 @@
+@use '../global' as *;
+.content {
+    p {
+        & ~ p {
+            margin-top: toRem(20);
+        }
+        & ~ :where(ul, ol) {
+            margin-top: toRem(20);
+        }
+    }
+    & :where(h1, h2, h3, h4, h5, h6) {
+    }
+    h1 {
+    }
+    h2 {
+    }
+    h3 {
+    }
+    h4 {
+    }
+    h5 {
+    }
+    h6 {
+    }
+    ul {
+    }
+    ol {
+    }
+    img {
+    }
+}

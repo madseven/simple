@@ -1,0 +1,17 @@
+@use '../global' as *;
+.nav {
+    &-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // .nav-list__item
+
+        &__item {
+        }
+
+        // .nav-list__link
+
+        &__link {
+        }
+    }
+}

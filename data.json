@@ -1,3 +1,9 @@
 {
-    "name": "SIMPLE-HTML"
-} 
+    "name": "SIMPLE-HTML",
+    "navTopLine": [
+        {
+            "href": "#!",
+            "title": "About"
+        }
+    ]
+}

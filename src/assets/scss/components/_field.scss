@@ -1,0 +1,19 @@
+@use '../global' as *;
+.field {
+    input {
+    }
+    [type='text'] {
+    }
+    [type='email'] {
+    }
+    [type='search'] {
+    }
+    @media (hover: hover) {
+        &:hover {
+        }
+    }
+    @media (hover: none) {
+        &:active {
+        }
+    }
+}

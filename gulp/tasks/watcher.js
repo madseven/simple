@@ -2,7 +2,7 @@ import gulpWatch from 'gulp-watch'
 import html from './html.js'
 import images from './images.js'
 import scripts from './scripts.js'
-import styles from './styles.js'
+import { styles } from './styles.js'
 import { PATHS } from '../config/paths.js'
 import video from './video.js'
 

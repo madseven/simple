@@ -8,47 +8,38 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
-html {
-    line-height: 1.15; /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
-}
-
-/* Sections
-     ========================================================================== */
-
-/**
-   * Remove the margin in all browsers.
-   */
-
-body {
+* {
     margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    box-sizing: border-box;
 }
 
-/**
-   * Render the `main` element consistently in IE.
-   */
+html {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -o-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
 
-main {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
     display: block;
 }
-
-/**
-   * Correct the font size and margin on `h1` elements within `section` and
-   * `article` contexts in Chrome, Firefox, and Safari.
-   */
-
-h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
-}
-
-/* Grouping content
-     ========================================================================== */
-
-/**
-   * 1. Add the correct box sizing in Firefox.
-   * 2. Show the overflow in Edge and IE.
-   */
 
 hr {
     box-sizing: content-box; /* 1 */
@@ -75,6 +66,8 @@ pre {
 
 a {
     background-color: transparent;
+    text-decoration: none;
+    color: currentColor;
 }
 
 /**
@@ -147,36 +140,19 @@ sup {
 
 img {
     border-style: none;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 /* Forms
      ========================================================================== */
 
-/**
-   * 1. Change the font styles in all browsers.
-   * 2. Remove the margin in Firefox and Safari.
-   */
-
-button,
-input,
-optgroup,
-select,
-textarea {
-    font-family: inherit; /* 1 */
-    font-size: 100%; /* 1 */
-    line-height: 1.15; /* 1 */
-    margin: 0; /* 2 */
-}
-
-/**
-   * Show the overflow in IE.
-   * 1. Show the overflow in Edge.
-   */
-
 button,
 input {
     /* 1 */
     overflow: visible;
+    outline: none;
 }
 
 /**
@@ -350,29 +326,11 @@ template {
     display: none;
 }
 
-*,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin-top: 0;
-}
-p {
-    margin-top: 0;
-}
-button,
-input,
-textarea {
-    padding: 0;
-    border-radius: 0;
-}
 svg {
     display: block;
 }
