@@ -1,1 +1,0 @@
-:root{--light: #fff;--dark: #000;--accent: red;--primary: green;--error: #ff4747;--border-width: 1px;--border: toRem(1) solid var(--dark)}.btn{border:var(--border);width:220px}
