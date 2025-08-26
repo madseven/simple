@@ -5,5 +5,15 @@
     "singleQuote": true,
     "bracketSpacing": true,
     "printWidth": 100,
-    "proseWrap": "always"
+    "proseWrap": "always",
+    "plugins": ["@zackad/prettier-plugin-twig"],
+    "overrides": [
+        {
+            "files": "*.twig",
+            "options": {
+                "tabWidth": 4,
+                "twigSingleQuote": true
+            }
+        }
+    ]
 }

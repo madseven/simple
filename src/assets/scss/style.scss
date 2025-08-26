@@ -25,13 +25,14 @@
 html {
     font-size: 0.851vw;
     @media (max-width: $laptop) {
-        font-size: 16px;
+        font-size: var(--font-size-default);
     }
 }
 
 body {
     overflow-x: hidden;
     font-family: $default-font-family;
+    min-width: var(--mobile-xs);
     &.lock {
         overflow: hidden;
         touch-action: none;
@@ -68,13 +69,6 @@ body {
     }
 }
 
-.sprite-svg {
-    position: absolute;
-    z-index: -100;
-    opacity: 0;
-    visibility: hidden;
-}
-
 // Прячет элемент в контексте родителя.
 .visually-hidden {
     position: absolute;
@@ -107,7 +101,7 @@ body {
     }
     code {
         padding: toRem(10);
-        max-width: toRem(500);
+        max-width: toRem(650);
         display: block;
         line-height: 1.5;
         background-color: #373737;

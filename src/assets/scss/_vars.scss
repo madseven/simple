@@ -3,6 +3,17 @@ $additional-font-family: 'Onest', 'Roboto', Arial, sans-serif;
 
 $font-base: 16;
 
+// breakpoints
+$mobile-xs: 320px;
+$mobile-sm: 426px;
+$mobile: 576px;
+$mobile-xl: 640px;
+$tablet-m: 743px;
+$tablet: 992px;
+$tablet-xl: 1180px;
+$laptop: 1440px;
+$desktop: 1920px;
+
 // тональность задается через -100...
 // прозрачность -o50 где число - это процент
 // меньшее/без значение default, большее hover\active
@@ -14,24 +25,16 @@ $font-base: 16;
     --error: #ff4747;
 
     --border: 0.0625rem solid var(--dark);
+
+    --font-size-default: 16px;
+
+    --mobile-xs: $mobile-xs;
+    --mobile-sm: $mobile-sm;
+    --mobile: $mobile;
+    --mobile-xl: $mobile-xl;
+    --tablet-m: $tablet-m;
+    --tablet: $tablet;
+    --tablet-xl: $tablet-xl;
+    --laptop: $laptop;
+    --desktop: $desktop;
 }
-
-$z-index--100: 100;
-$z-index--200: 200;
-$z-index--300: 300;
-$z-index--400: 400;
-$z-index--500: 500;
-$z-index--float-button: 600;
-$z-index--header: 700;
-$z-index--modal: 1000;
-$z-index--highest: 2000;
-
-// breakpoints
-$mobile-sm: 426px;
-$mobile: 576px;
-$mobile-xl: 640px;
-$tablet-m: 743px;
-$tablet: 992px;
-$tablet-xl: 1180px;
-$laptop: 1440px;
-$desktop: 1920px;

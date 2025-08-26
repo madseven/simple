@@ -99,3 +99,14 @@ npm run deploy
 
 Формат .webp создается для каждого изображения по умолчанию. Для сжатия изображения необходимо
 присвоить переменной imageOptimize значение true (../gulp/tasks/images.js)
+
+## VS Code рекомендации
+1. CSS Variable Autocomplete - Поддерживает автодополнение CSS и SCSS переменных с цветовой подсветкой.
+2. Twig Pack - Понадобится для расширенной поддержки Twig, включая стили и сниппеты, потому что сам Twig — это нестандартный синтаксис.
+3. в settings.json добавить 
+    ```
+    "[twig]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    ```
